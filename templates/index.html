@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div id="info" style="padding-bottom:40px;">
+    Sunline graphs the position of the sun in a given location
+    throughout a given day. Latitude and longitude must be single numbers with no
+    other characters (i.e. -40.5, not -40.5&#176;, 40.5&#176;W, or 40&#176; 30').
+    The date is optional and defaults to today.
+  </div>
+
+  <div style="text-align:center; margin:auto">
+    <div class="input-group">
+      <span>Latitude: </span><input type="number" id="lat">
+    </div>
+    <br>
+    <div class="input-group">
+      <span>Longitude: </span><input type="number" id="long">
+    </div>
+    <br>
+    <div class="input-group">
+      <span>Date: </span><input type="date" id="date">
+    </div>
+    <br><br>
+    <span id="button" onclick="populateChart()">Get Chart!</span>
+    <br><br>
+    <span id="error" id="error"></span>
+    <br><br>
+    <span id="fetch">Fetching chart...</span>
+  </div>
+  <div id="chart"></div>
+  <script type="text/javascript">
+    var button = document.getElementById('button');
+
+    button.addEventListener("mousedown", function(){
+      button.setAttribute('style', 'transform:translate(3px, 3px)');
+    });
+
+    button.addEventListener("mouseup", function(){
+      button.setAttribute('style', '');
+    });
+  </script>
+{% endblock %}

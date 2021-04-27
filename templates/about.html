@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div id="info">
+    <p>
+      Sunline is created and maintained by Taylor Hornig. It's
+      powered by <a target="_blank" class="abt-link" href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a>,
+      <a target="_blank" class="abt-link" href="https://pysolar.org/">Pysolar</a>,
+      <a target="_blank" class="abt-link" href="https://sunrise-sunset.org/api">SunriseSunset.com</a>, and
+      <a target="_blank" class="abt-link" href="https://plotly.com/javascript/">the Plotly JavaScript Open Source Graphing Library</a>.
+    </p>
+    <p>
+      The plot data is available as an API. You can access it without a date,
+      using a latitude followed by a longitude:
+      <div class="code-block">
+        https://www.sunlineapp.com/api/40.5/-40.5
+      </div>
+      Or with a date:
+      <div class="code-block">
+        https://www.sunlineapp.com/api/date/40.5/-40.5/2020-06-21
+      </div>
+      If you use it, please include a link to this site, and
+      please don't make excessive requests.  Thanks!
+  </div>
+{% endblock %}

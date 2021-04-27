@@ -1,0 +1,126 @@
+/*
+ * Hide chart toolbar
+ * https://community.plotly.com/t/is-it-possible-to-hide-the-floating-toolbar/4911/5
+ */
+.modebar {
+  display: none;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: 'Verdana', 'sans-serif'
+}
+
+#chart {
+  margin-top: -40px;
+}
+
+#error {
+  color: red;
+  display: none;
+}
+
+#info {
+  margin: auto;
+  max-width: 60%;
+  line-height: 1.5rem;
+}
+
+#nav {
+  position: fixed;
+  height: 61px;
+  width: 100%;
+  padding: 10px 0 0 10px;
+  background: white;
+  color: #fc7b03;
+}
+
+#nav a#logo {
+  font-family: "Righteous";
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#nav a {
+  display: inline-block;
+  color: #fc7b03;
+  text-decoration: none;
+
+  margin-right: 20px;
+}
+
+#nav a:hover {
+  color: #ffae3d;
+}
+
+#content {
+  padding-top: 101px;
+}
+
+.input-group {
+  display:inline-flex;
+  justify-content:space-between;
+  align-items: center;
+  width:290px;
+  max-width: 90%;
+  padding-bottom: 10px;
+}
+
+.input-group input {
+  width: 150px;
+}
+
+/*
+ * Setting custom input focus color
+ * https://stackoverflow.com/questions/16156594/how-to-change-border-color-of-textarea-on-focus
+ */
+
+.input-group input:focus {
+  outline: none !important;
+  border: 2px solid #fc7b03;
+  border-radius: 3px;
+}
+
+#button {
+  display: inline-block;
+  font-family: 'Verdana';
+  padding: 10px;
+  background: #fcc203;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#fetch {
+  display: none;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 10px;
+  text-align: right;
+}
+
+#footer span {
+  display: inline-block;
+  padding-right: 20px;
+  font-size: 14px;
+}
+
+
+.abt-link {
+  color: #fc7b03;
+  text-decoration: none;
+}
+
+.abt-link:hover {
+  color: #ffae3d
+}
+
+.code-block {
+  margin: 16px 0;
+  font-family: "Source Code Pro";
+}
