@@ -12,10 +12,6 @@ body {
   font-family: 'Verdana', 'sans-serif'
 }
 
-#chart {
-  margin-top: -40px;
-}
-
 #error {
   color: red;
   display: none;
