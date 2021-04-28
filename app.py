@@ -1,5 +1,4 @@
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template, request
 import json
 from markupsafe import escape
 from convert import *
@@ -11,7 +10,8 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    base = request.base_url
+    return render_template('about.html', base=base)
 
 @app.route('/api/<lat>/<long>')
 def api(lat, long):
