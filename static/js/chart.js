@@ -17,6 +17,15 @@ function populateChart() {
     return;
   }
 
+  // Make sure date isn't entered wrong in Safari
+  // RegEx from https://www.regextester.com/96683
+  var dateRegEx = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
+  if (date && !date.match(dateRegEx)) {
+    error.innerHTML = "This date is formatted incorrectly. (Must be in the format yyyy-mm-dd.)";
+    error.setAttribute('style', 'display:inline-block');
+    return;
+  }
+
   chart.setAttribute('style', 'visibility:hidden');
   fetching.setAttribute('style', 'display:inline-block');
 

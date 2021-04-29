@@ -18,7 +18,7 @@ def api(lat, long):
     data = get_sun_coords(escape(lat), escape(long))
     return json.dumps(data)
 
-@app.route('/api/<lat>/<long>/<date>')
+@app.route('/api/date/<lat>/<long>/<date>')
 def api_date(lat, long, date):
     data = get_sun_coords(escape(lat), escape(long), escape(date))
     return json.dumps(data)
