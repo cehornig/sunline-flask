@@ -1,5 +1,3 @@
-// Test comment
-
 function populateChart() {
   var chart = document.getElementById('chart');
   var latitude = document.getElementById('lat').value;
